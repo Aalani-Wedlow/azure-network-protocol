@@ -108,13 +108,19 @@ To observe ICMP Traffic:
 <img src="https://github.com/user-attachments/assets/3ca5905f-80ec-4ec5-a5ab-f785f7951f5d" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- Within Wireshark, type dns or udp.port == 53 to filter for DNS traffic
+
+- Within PowerShell, type nslookup www.google.com. This will allow you to recieve a response form the DNS server with the IPv4 address of google.com. DNS traffic is also able to be observed within Wireshark, providing a highlight of the different lookups preformed in the attempt to gather information about google.com.
 
   <p> <h2>Observe RDP Traffic</h2>
 <img src="https://github.com/user-attachments/assets/9d771f34-1820-49bf-bbfc-fc7cea6bf082" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+  - Within Wireshark, type rdp or tcp.port == 3389 to filter for RDP traffic
+
+  - By entering this in, we're able to observe a continuous stream of data. This is a representation of the constant flow of RDP traffic being exchanged between the local computer and the Windows VM. There's non-stop traffic due to the lack of activity by the user. 
 <br />
  <h4>Side Note</h4>
 <p> Be sure to delete any Resource Group upon completion to ensure the avoidance of extra charges.
